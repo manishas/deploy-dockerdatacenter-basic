@@ -1,25 +1,25 @@
 jobs:
 
-  - name: deploy-dockercloud-basic_runCI
+  - name: deploy-dockerdatacenter-basic_runCI
     type: runCI
     steps:
-      - OUT: ddcb-image
+      - OUT: dddcb-image
 
-  - name: ddcb-manifest
+  - name: dddcb-manifest
     type: manifest
     steps:
-      - IN: ddcb-image
+      - IN: dddcb-image
       - TASK: managed
     flags:
-      - deploy-dockercloud-basic
+      - deploy-dockerdatacenter-basic
 
-#dockercloud deploy job
-  - name: ddcb-deploy
+#dockerdatacenter deploy job
+  - name: dddcb-deploy
     type: deploy
     steps:
-      - IN: ddcb-manifest
-      - IN: ddcb-cluster
+      - IN: dddcb-manifest
+      - IN: dddcb-cluster
       - TASK: managed
         deployMethod: upgrade
     flags:
-      - deploy-dockercloud-basic
+      - deploy-dockerdatacenter-basic

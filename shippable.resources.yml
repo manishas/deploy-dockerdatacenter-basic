@@ -10,10 +10,10 @@ resources:
     flags:
       - deploy-dockerdatacenter-basic
 
-  #docker cloud cluster
+  #Docker Datacenter cluster
   - name: dddcb-cluster
     type: cluster
-    integration: dr-docker-datacenter    #replace with your docker datacenter integration name
+    integration: dr-docker-datacenter    #replace with your Docker Datacenter integration name
     pointer:
           sourceName: "deploy-docker-datacenter"
     flags:

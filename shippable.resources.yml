@@ -13,7 +13,7 @@ resources:
   #docker cloud cluster
   - name: dddcb-cluster
     type: cluster
-    integration: dr-docker-cloud    #replace with your docker cloud integration name
+    integration: deploy-docker-datacenter    #replace with your docker datacenter integration name
     pointer:
           sourceName: "deploy-docker-datacenter"
     flags:

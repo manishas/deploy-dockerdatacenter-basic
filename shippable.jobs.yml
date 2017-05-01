@@ -13,7 +13,7 @@ jobs:
     flags:
       - deploy-dockerdatacenter-basic
 
-#dockerdatacenter deploy job
+  #Docker Datacenter deploy job
   - name: dddcb-deploy
     type: deploy
     steps:

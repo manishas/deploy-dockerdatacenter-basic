@@ -16,10 +16,9 @@ jobs:
   #Docker Datacenter deploy job
   - name: dddcb-deploy
     type: deploy
+    method: upgrade
     steps:
       - IN: dddcb-manifest
       - IN: dddcb-cluster
-      - TASK: managed
-        deployMethod: upgrade
     flags:
       - deploy-dockerdatacenter-basic
